@@ -1,126 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Collaboration Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StartUp helps businesses grow with simple digital solutions.">
+  <title>StartUp | Grow Your Business</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f7fb;
-            color: #263238;
-            line-height: 1.6;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f8fafc;
+      color: #334155;
+      margin: 0;
+      line-height: 1.6;
+    }
 
-        header {
-            background: #172554;
-            color: white;
-            text-align: center;
-            padding: 35px 15px;
-        }
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 24px 20px;
+    }
 
-        header h1 {
-            margin-bottom: 8px;
-        }
+    header h2 {
+      margin: 0;
+      letter-spacing: 1px;
+    }
 
-        main {
-            max-width: 850px;
-            margin: 30px auto;
-            padding: 20px;
-        }
+    main {
+      padding: 55px 20px;
+    }
 
-        .card {
-            background: white;
-            padding: 22px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px #0000000d;
-        }
+    h1 {
+      color: #0f766e;
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+    }
 
-        h2 {
-            color: #1d4ed8;
-            margin-bottom: 10px;
-        }
+    main > p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+    }
 
-        ul {
-            padding-left: 22px;
-        }
+    section {
+      background: white;
+      max-width: 600px;
+      margin: 40px auto 0;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(15, 23, 42, 0.08);
+    }
 
-        .button {
-            display: inline-block;
-            background: #2563eb;
-            color: white;
-            padding: 10px 18px;
-            margin-top: 12px;
-            text-decoration: none;
-            border-radius: 6px;
-        }
+    section h2 {
+      color: #0f766e;
+      margin-top: 10px;
+    }
 
-        .button:hover {
-            background: #1e40af;
-        }
+    ul {
+      display: inline-block;
+      text-align: left;
+      line-height: 2;
+      padding-left: 25px;
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #64748b;
-        }
-    </style>
+    button {
+      background: #0f766e;
+      color: white;
+      padding: 12px 26px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background: #115e59;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: #0f172a;
+      color: white;
+      padding: 18px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 35px 15px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      main > p {
+        font-size: 1rem;
+      }
+
+      section {
+        padding: 20px;
+        margin-top: 30px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <h1>Team Collaboration Project</h1>
-        <p>Learning Git, GitHub and teamwork</p>
-    </header>
+  <header>
+    <h2>StartUp</h2>
+  </header>
 
-    <main>
-        <section class="card">
-            <h2>About Our Project</h2>
-            <p>
-                This project demonstrates how software developers
-                collaborate using GitHub. Team members work on
-                separate branches and contribute improvements.
-            </p>
-        </section>
+  <main>
+    <h1>Grow Your Business</h1>
+    <p>We help businesses succeed with simple digital solutions.</p>
+    <button type="button">Get Started</button>
 
-        <section class="card">
-            <h2>Project Objectives</h2>
-            <ul>
-                <li>Create and manage a GitHub repository.</li>
-                <li>Clone the project to a local computer.</li>
-                <li>Create branches for individual contributions.</li>
-                <li>Commit and push code changes.</li>
-                <li>Review and merge pull requests.</li>
-            </ul>
-        </section>
+    <section>
+      <h2>About Me</h2>
+      <p>Hello, I'm Alisha!</p>
+      <p>
+        I'm a Software Engineering student learning
+        web development and GitHub collaboration.
+      </p>
 
-        <section class="card">
-            <h2>Team Contributions</h2>
-            <ul>
-                <li>Manager: Repository setup and collaboration.</li>
-                <li>Member 1: Improve the project introduction.</li>
-                <li>Member 2: Add a new project objective.</li>
-                <li>Member 3: Improve page styling.</li>
-            </ul>
-            <a class="button"
-               href="https://github.com/"
-               target="_blank"
-               rel="noopener noreferrer">
-                Visit GitHub
-            </a>
-        </section>
-    </main>
+      <h2>My Interests</h2>
+      <ul>
+        <li>Programming</li>
+        <li>Web Development</li>
+        <li>Artificial Intelligence</li>
+      </ul>
+    </section>
+  </main>
 
-    <footer>
-        <p>Team HTML Project | Built with HTML and CSS</p>
-    </footer>
+  <footer>
+    <p>&copy; 2026 StartUp</p>
+  </footer>
 </body>
 </html>
