@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="StartUp helps businesses grow with simple digital solutions.">
-  <title>StartUp | Grow Your Business</title>
+  <title>StartUp</title>
 
   <style>
     * {
@@ -14,135 +13,206 @@
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      background: #f8fafc;
-      color: #334155;
+      background: #f1f5f9;
+      color: #1e293b;
       margin: 0;
-      line-height: 1.6;
+      transition: 0.3s;
     }
 
     header {
-      background: #0f172a;
+      background: #1e293b;
       color: white;
-      padding: 24px 20px;
+      padding: 20px;
     }
 
     header h2 {
-      margin: 0;
-      letter-spacing: 1px;
+      margin: 0 0 10px;
     }
 
-    main {
-      padding: 55px 20px;
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px 20px;
     }
 
     h1 {
       color: #0f766e;
-      font-size: 2.4rem;
-      margin-bottom: 15px;
     }
 
-    main > p {
-      font-size: 1.1rem;
-      margin-bottom: 25px;
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: auto;
     }
 
-    section {
+    .card {
       background: white;
-      max-width: 600px;
-      margin: 40px auto 0;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(15, 23, 42, 0.08);
-    }
-
-    section h2 {
-      color: #0f766e;
-      margin-top: 10px;
-    }
-
-    ul {
-      display: inline-block;
-      text-align: left;
-      line-height: 2;
-      padding-left: 25px;
+      padding: 20px;
+      border-radius: 8px;
+      width: 250px;
+      box-shadow: 0 2px 8px #00000010;
     }
 
     button {
       background: #0f766e;
       color: white;
-      padding: 12px 26px;
+      padding: 12px 24px;
       border: none;
-      border-radius: 6px;
+      border-radius: 5px;
       cursor: pointer;
-      font-size: 1rem;
-      transition: background 0.2s ease, transform 0.2s ease;
+      margin: 5px;
     }
 
     button:hover {
       background: #115e59;
-      transform: translateY(-2px);
+    }
+
+    #message {
+      margin-top: 20px;
+      color: #0f766e;
+      font-weight: bold;
+    }
+
+    a.contact {
+      color: #0f766e;
+      font-weight: bold;
     }
 
     footer {
-      background: #0f172a;
+      background: #1e293b;
       color: white;
-      padding: 18px;
+      padding: 15px;
     }
 
-    footer p {
-      margin: 0;
+    /* Dark Theme */
+    body.dark {
+      background: #0f172a;
+      color: white;
+    }
+
+    body.dark h1 {
+      color: #5eead4;
+    }
+
+    body.dark .card {
+      background: #1e293b;
+      color: white;
+    }
+
+    body.dark #message,
+    body.dark a.contact {
+      color: #5eead4;
     }
 
     @media (max-width: 600px) {
-      main {
-        padding: 35px 15px;
+      header {
+        padding: 15px;
       }
 
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      main > p {
-        font-size: 1rem;
+      nav a {
+        display: inline-block;
+        margin: 8px 5px;
       }
 
       section {
-        padding: 20px;
-        margin-top: 30px;
+        padding: 30px 15px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 350px;
       }
     }
   </style>
 </head>
 
 <body>
+
   <header>
     <h2>StartUp</h2>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button onclick="toggleTheme()">Toggle Theme</button>
   </header>
 
-  <main>
+  <section id="about">
     <h1>Grow Your Business</h1>
-    <p>We help businesses succeed with simple digital solutions.</p>
-    <button type="button">Get Started</button>
 
-    <section>
-      <h2>About Me</h2>
-      <p>Hello, I'm Alisha!</p>
-      <p>
-        I'm a Software Engineering student learning
-        web development and GitHub collaboration.
-      </p>
+    <p>
+      We help businesses succeed with simple digital solutions.
+    </p>
 
-      <h2>My Interests</h2>
-      <ul>
-        <li>Programming</li>
-        <li>Web Development</li>
-        <li>Artificial Intelligence</li>
-      </ul>
-    </section>
-  </main>
+    <button onclick="getStarted()">Get Started</button>
+    <p id="message"></p>
+  </section>
+
+  <section id="features">
+    <h1>Our Features</h1>
+
+    <div class="features">
+      <div class="card">
+        <h3>Easy to Use</h3>
+        <p>Simple solutions designed for everyone.</p>
+      </div>
+
+      <div class="card">
+        <h3>Smart Solutions</h3>
+        <p>Useful tools to improve everyday work.</p>
+      </div>
+
+      <div class="card">
+        <h3>Business Growth</h3>
+        <p>Support to help your business move forward.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h1>Contact Us</h1>
+
+    <p>Have a question? We'd love to hear from you.</p>
+
+    <a class="contact" href="mailto:hello@example.com">
+      Email Us
+    </a>
+  </section>
 
   <footer>
-    <p>&copy; 2026 StartUp</p>
+    <p id="footerText"></p>
   </footer>
+
+  <script>
+    // Display a welcome message when Get Started is clicked
+    function getStarted() {
+      document.getElementById("message").textContent =
+        "Thank you for your interest in StartUp!";
+    }
+
+    // Switch between light and dark themes
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+    }
+
+    // Display the current year automatically
+    document.getElementById("footerText").textContent =
+      "© " + new Date().getFullYear() + " StartUp";
+  </script>
+
 </body>
 </html>
