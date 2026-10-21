@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -138,7 +139,6 @@
 </head>
 
 <body>
-
   <header>
     <h2>StartUp</h2>
 
@@ -151,54 +151,56 @@
     <button onclick="toggleTheme()">Toggle Theme</button>
   </header>
 
-  <section id="about">
-    <h1>Grow Your Business</h1>
+  <main>
+    <section id="about">
+      <h1>Grow Your Business</h1>
 
-    <p>
-      We help businesses succeed with simple digital solutions.
-    </p>
+      <p>
+        We help businesses succeed with simple digital solutions.
+      </p>
 
-    <button onclick="getStarted()">Get Started</button>
-    <p id="message"></p>
-  </section>
+      <button onclick="getStarted()">Get Started</button>
+      <p id="message"></p>
+    </section>
 
-  <section id="features">
-    <h1>Our Features</h1>
+    <section id="features">
+      <h1>Our Features</h1>
 
-    <div class="features">
-      <div class="card">
-        <h3>Easy to Use</h3>
-        <p>Simple solutions designed for everyone.</p>
+      <div class="features">
+        <div class="card">
+          <h3>Easy to Use</h3>
+          <p>Simple solutions designed for everyone.</p>
+        </div>
+
+        <div class="card">
+          <h3>Smart Solutions</h3>
+          <p>Useful tools to improve everyday work.</p>
+        </div>
+
+        <div class="card">
+          <h3>Business Growth</h3>
+          <p>Support to help your business move forward.</p>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Smart Solutions</h3>
-        <p>Useful tools to improve everyday work.</p>
-      </div>
+    <section id="contact">
+      <h1>Contact Us</h1>
 
-      <div class="card">
-        <h3>Business Growth</h3>
-        <p>Support to help your business move forward.</p>
-      </div>
-    </div>
-  </section>
+      <p>Have a question? We'd love to hear from you.</p>
 
-  <section id="contact">
-    <h1>Contact Us</h1>
-
-    <p>Have a question? We'd love to hear from you.</p>
-
-    <a class="contact" href="mailto:hello@example.com">
-      Email Us
-    </a>
-  </section>
+      <a class="contact" href="mailto:hello@example.com">
+        Email Us
+      </a>
+    </section>
+  </main>
 
   <footer>
     <p id="footerText"></p>
   </footer>
 
   <script>
-    // Display a welcome message when Get Started is clicked
+    // Display a welcome message
     function getStarted() {
       document.getElementById("message").textContent =
         "Thank you for your interest in StartUp!";
@@ -213,6 +215,5 @@
     document.getElementById("footerText").textContent =
       "© " + new Date().getFullYear() + " StartUp";
   </script>
-
 </body>
 </html>
