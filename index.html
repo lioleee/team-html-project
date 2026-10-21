@@ -2,126 +2,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Collaboration Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StartUp</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f1f5f9;
+      color: #1e293b;
+      margin: 0;
+      transition: 0.3s;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f7fb;
-            color: #263238;
-            line-height: 1.6;
-        }
+    header {
+      background: #1e293b;
+      color: white;
+      padding: 20px;
+    }
 
-        header {
-            background: #172554;
-            color: white;
-            text-align: center;
-            padding: 35px 15px;
-        }
+    main {
+      padding: 50px 20px;
+    }
 
-        header h1 {
-            margin-bottom: 8px;
-        }
+    h1 {
+      color: #0f766e;
+    }
 
-        main {
-            max-width: 850px;
-            margin: 30px auto;
-            padding: 20px;
-        }
+    button {
+      background: #0f766e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
 
-        .card {
-            background: white;
-            padding: 22px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px #0000000d;
-        }
+    button:hover {
+      background: #115e59;
+    }
 
-        h2 {
-            color: #1d4ed8;
-            margin-bottom: 10px;
-        }
+    footer {
+      background: #1e293b;
+      color: white;
+      padding: 15px;
+    }
 
-        ul {
-            padding-left: 22px;
-        }
+    /* Dark Theme */
+    body.dark {
+      background: #0f172a;
+      color: white;
+    }
 
-        .button {
-            display: inline-block;
-            background: #2563eb;
-            color: white;
-            padding: 10px 18px;
-            margin-top: 12px;
-            text-decoration: none;
-            border-radius: 6px;
-        }
+    body.dark h1 {
+      color: #5eead4;
+    }
 
-        .button:hover {
-            background: #1e40af;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #64748b;
-        }
-    </style>
+    #message {
+      margin-top: 20px;
+      color: #0f766e;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <h1>Team Collaboration Project</h1>
-        <p>Learning Git, GitHub and teamwork</p>
-    </header>
 
-    <main>
-        <section class="card">
-            <h2>About Our Project</h2>
-            <p>
-                This project demonstrates how software developers
-                collaborate using GitHub. Team members work on
-                separate branches and contribute improvements.
-            </p>
-        </section>
+  <header>
+    <h2>StartUp</h2>
+    <button onclick="toggleTheme()">Toggle Theme</button>
+  </header>
 
-        <section class="card">
-            <h2>Project Objectives</h2>
-            <ul>
-                <li>Create and manage a GitHub repository.</li>
-                <li>Clone the project to a local computer.</li>
-                <li>Create branches for individual contributions.</li>
-                <li>Commit and push code changes.</li>
-                <li>Review and merge pull requests.</li>
-            </ul>
-        </section>
+  <main>
+    <h1>Grow Your Business</h1>
 
-        <section class="card">
-            <h2>Team Contributions</h2>
-            <ul>
-                <li>Manager: Repository setup and collaboration.</li>
-                <li>Member 1: Improve the project introduction.</li>
-                <li>Member 2: Add a new project objective.</li>
-                <li>Member 3: Improve page styling.</li>
-            </ul>
-            <a class="button"
-               href="https://github.com/"
-               target="_blank"
-               rel="noopener noreferrer">
-                Visit GitHub
-            </a>
-        </section>
-    </main>
+    <p>
+      We help businesses succeed with simple digital solutions.
+    </p>
 
-    <footer>
-        <p>Team HTML Project | Built with HTML and CSS</p>
-    </footer>
+    <button onclick="getStarted()">Get Started</button>
+
+    <p id="message"></p>
+  </main>
+
+  <footer>
+    <p id="footerText"></p>
+  </footer>
+
+  <script>
+    // Display a welcome message when Get Started is clicked
+    function getStarted() {
+      document.getElementById("message").textContent =
+        "Thank you for your interest in StartUp!";
+    }
+
+    // Switch between light and dark themes
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+    }
+
+    // Display the current year automatically
+    document.getElementById("footerText").textContent =
+      "© " + new Date().getFullYear() + " StartUp";
+  </script>
+
 </body>
 </html>
